@@ -23,6 +23,7 @@ from Oneforall.utils.formatters import get_readable_time
 from Oneforall.utils.inline import help_pannel, private_panel, start_panel
 from strings import get_string
 from Oneforall.misc import SUDOERS
+from Oneforall import db, rules_collection
 
 @app.on_message(filters.command(["start"]) & filters.private & ~BANNED_USERS)
 @LanguageStart
