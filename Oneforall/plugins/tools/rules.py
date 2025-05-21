@@ -7,7 +7,7 @@ from config import MONGO_DB_URI as MONGO_URI
 rules_collection = db['rules']
 
 
-bot_username = "WaifuCollector_Bot"  # Apne bot ka username (without @)
+bot_username = "Oneforall_robot"  # Apne bot ka username (without @)
 
 
 
