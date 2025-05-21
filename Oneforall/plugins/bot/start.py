@@ -31,6 +31,15 @@ async def start_pm(client, message: Message, _):
     await message.react("❤")
     if len(message.text.split()) > 1:
         name = message.text.split(None, 1)[1]
+        if name.startswith("rules_"):
+            chat_id = int(name.split("_")[1])
+            rules_data = await db["rules"].find_one({"chat_id": chat_id})
+            if rules_data and rules_data.get("rules"):
+                return await message.reply_text(
+                    f"**📜 Rules for this group:**\n\n{rules_data['rules']}"
+                )
+            else:
+                return await message.reply_text("❌ No rules set for this group.")
         if name[0:4] == "help":
             keyboard = help_pannel(_)
             await message.reply_sticker(
