@@ -37,3 +37,4 @@ MONGO_DB_URI = "mongodb+srv://bikash:bikash@bikash.3jkvhp7.mongodb.net/?retryWri
 
 zyro = AsyncIOMotorClient(MONGO_DB_URI)
 db = zyro['waifu_collector_bot']
+rules_collection = db['rules']
