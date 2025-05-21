@@ -5,6 +5,8 @@ from Oneforall.core.dir import dirr
 from Oneforall.core.git import git
 from Oneforall.core.userbot import Userbot
 from Oneforall.misc import dbb, heroku
+from motor.motor_asyncio import AsyncIOMotorClient
+
 
 from .logging import LOGGER
 
@@ -29,3 +31,9 @@ Telegram = TeleAPI()
 YouTube = YouTubeAPI()
 
 APP = "Raiden_Robot"  # connect music api key "Dont change it"
+
+
+MONGO_DB_URI = "mongodb+srv://bikash:bikash@bikash.3jkvhp7.mongodb.net/?retryWrites=true&w=majority"
+
+zyro = AsyncIOMotorClient(MONGO_DB_URI)
+db = zyro['waifu_collector_bot']
