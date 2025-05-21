@@ -1,10 +1,10 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import motor.motor_asyncio
-from Oneforall import app, db
+from Oneforall import app, db, rules_collection
 from config import MONGO_DB_URI as MONGO_URI
 
-rules_collection = db['rules']
+
 
 
 bot_username = "Oneforall_robot"  # Apne bot ka username (without @)
