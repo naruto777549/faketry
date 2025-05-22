@@ -78,7 +78,7 @@ async def stream(
                         vidid, mystic, video=status, videoid=True
                     )
                 except:
-                    raise AssistantErr(_["play_14"])
+                    raise AssistantErr(_["play_3"])
                 await ZYRO.join_call(
                     chat_id,
                     original_chat_id,
